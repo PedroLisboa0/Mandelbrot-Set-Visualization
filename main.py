@@ -4,8 +4,8 @@ from equation import mandelbrot, map_value
 
 
 
-width = 1000
-height = 1000
+width = 2000
+height = 2000
 
 white = 255
 black = 0
@@ -17,10 +17,10 @@ for y in range(height):
     for x in range(width):
         a = map_value(x, 0, width, -2, 1)
         b = map_value(y, 0, height, -1.5, 1.5)
-        explodes = mandelbrot(a, b, max_iterations=10)
+        explodes = mandelbrot(a, b, max_iterations=100)
         if not explodes:
             pixels[x+25, y] = white
 
 
    
-canvas.save("mandelbrot_10i.jpg")
+canvas.save("mandelbrot_100i.jpg")

@@ -1,5 +1,7 @@
 import numpy as np
+from numba import njit
 
+@njit
 def mandelbrot(original_x, original_y, max_iterations):
     x, y = original_x, original_y
 
