@@ -1,7 +1,6 @@
 import numpy as np
 
-def mandelbrot(point, max_iterations):
-    original_x, original_y = point
+def mandelbrot(original_x, original_y, max_iterations):
     x, y = original_x, original_y
 
     for step in range(max_iterations):

@@ -15,12 +15,12 @@ pixels = canvas.load()
 
 for y in range(height):
     for x in range(width):
-        a = map_value(x, 0, width, -2, 2)
-        b = map_value(y, 0, height, -2, 2)
-        explodes = mandelbrot(point=(a,b), max_iterations=100)
+        a = map_value(x, 0, width, -2, 1)
+        b = map_value(y, 0, height, -1.5, 1.5)
+        explodes = mandelbrot(a, b, max_iterations=10)
         if not explodes:
-            pixels[x+15, y] = white
+            pixels[x+25, y] = white
 
 
    
-canvas.save("mandelbrot_set.jpg")
+canvas.save("mandelbrot_10i.jpg")
